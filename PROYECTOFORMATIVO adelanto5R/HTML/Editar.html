@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - Óptica</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Editar Perfil</h1>
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('profile')">Información del Perfil</div>
+            <div class="tab" onclick="showTab('password')">Cambiar Contraseña</div>
+        </div>
+        <div id="profile" class="tab-content active">
+            <form>
+                <div class="form-group">
+                    <label for="profile-photo">Foto de Perfil:</label>
+                    <div class="profile-photo-container">
+                        <img src="../IMG/22_Profile.jpg" alt="Foto de perfil actual" class="current-photo">
+                    </div>
+                </div>
+                <div>
+                    <input type="file" id="profile-photo" accept="image/*">
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastname">Apellido:</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="birthdate">Fecha de Nacimiento:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Dirección:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary">Guardar Cambios</button>
+            </form>
+        </div>
+        <div id="password" class="tab-content">
+            <form>
+                <div class="form-group">
+                    <label for="current-password">Contraseña Actual:</label>
+                    <input type="password" id="current-password" name="current-password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="new-password">Nueva Contraseña:</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar Nueva Contraseña:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Cambiar Contraseña</button>
+            </form>
+        </div>
+        <div class="delete-profile">
+            <button type="button" class="btn-danger" onclick="confirmDelete()">Eliminar Perfil</button>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            var tabs = document.getElementsByClassName('tab');
+            var tabContents = document.getElementsByClassName('tab-content');
+            
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+                tabContents[i].classList.remove('active');
+            }
+            
+            document.querySelector('.tab:nth-child(' + (tabName === 'profile' ? '1' : '2') + ')').classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+
+        function confirmDelete() {
+            if (confirm("¿Estás seguro de que quieres eliminar tu perfil? Esta acción no se puede deshacer.")) {
+                alert("Perfil eliminado");
+                // Aquí iría la lógica para eliminar el perfil
+            }
+        }
+    </script>
+</body>
+</html>

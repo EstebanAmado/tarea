@@ -1,0 +1,44 @@
+.bd-placeholder{
+    background-color: brown;
+    width: 100%;
+    height: 300px;
+
+
+}
+.container2{
+    background-color: black;
+    width: 100%;
+    height: 50px;
+
+
+}
+.wer{
+    background-color: yellowgreen;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+}
+
+
+
+.row{
+    width: 30%;
+    background-color: blueviolet;
+    text-align: center;
+
+    
+}
+
+
+#jum{
+    margin-left: 70px;
+    width: 900px;
+
+
+}
+
+#we{
+    background-color: aqua;
+   
+}

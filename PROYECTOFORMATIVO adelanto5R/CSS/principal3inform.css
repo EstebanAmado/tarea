@@ -1,0 +1,93 @@
+/* Estructura de la página */
+.cuerpo {
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+    background-color: rgb(255, 0, 191);
+}
+
+#is3 {
+    width: 250px;
+    background-color: antiquewhite;
+    color: black;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+
+.optica-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.optica-info {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.optica-info h2, .optica-info h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+.optica-fotos {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.foto-optica {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.foto-optica:hover {
+    transform: scale(1.1);
+}
+
+.ubicacion h3, .contacto h3, .procedimientos h3 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.contacto p {
+    text-align: center;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .foto-optica {
+        max-width: 100%;
+    }
+    .optica-fotos {
+        gap: 5px;
+    }
+    .optica-info {
+        padding: 15px;
+    }
+}

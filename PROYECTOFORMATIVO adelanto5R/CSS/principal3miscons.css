@@ -1,0 +1,82 @@
+/* Estructura de la página */
+.cuerpo {
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+    background-color: rgb(255, 0, 191);
+}
+
+#is3 {
+    width: 250px;
+    background-color: antiquewhite;
+    color: black;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.consultas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.consultas {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.consultas h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.consulta-item {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.consulta-item h4 {
+    color: #f5a623;
+    margin-bottom: 5px;
+}
+
+.consulta-item p {
+    margin: 0;
+}
+
+/* Botón para agendar cita */
+.d-grid .btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+.d-grid .btn:hover {
+    background-color: #0056b3;
+}
